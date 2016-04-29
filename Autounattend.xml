@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unattend xmlns="urn:schemas-microsoft-com:unattend">
+    <settings pass="windowsPE">
+        <component language="neutral" name="Microsoft-Windows-International-Core-WinPE" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <SetupUILanguage>
+                <UILanguage>de-de</UILanguage>
+            </SetupUILanguage>
+            <InputLocale>de-de</InputLocale>
+            <UILanguage>de-de</UILanguage>
+            <UserLocale>de-de</UserLocale>
+            <SystemLocale>de-de</SystemLocale>
+        </component>
+        <component language="neutral" name="Microsoft-Windows-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <ImageInstall>
+                <OSImage>
+                    <InstallFrom>
+                        <MetaData wcm:action="add">
+                            <Key>/IMAGE/NAME</Key>
+                            <Value>Windows Server 2012 R2 SERVERDATACENTER</Value>
+                        </MetaData>
+                    </InstallFrom>
+                    <InstallTo>
+                        <DiskID>0</DiskID>
+                        <PartitionID>2</PartitionID>
+                    </InstallTo>
+                    <InstallToAvailablePartition>false</InstallToAvailablePartition>
+                </OSImage>
+            </ImageInstall>
+            <UserData>
+                <ProductKey>
+                    <Key>W3GGN-FT8W3-Y4M27-J84CP-Q3VJ9</Key>
+                    <WillShowUI>OnError</WillShowUI>
+                </ProductKey>
+                <AcceptEula>true</AcceptEula>
+                <FullName>--</FullName>
+                <Organization>--</Organization>
+            </UserData>
+            <EnableFirewall>false</EnableFirewall>
+            <EnableNetwork>true</EnableNetwork>
+            <DiskConfiguration>
+                <Disk wcm:action="add">
+                    <CreatePartitions>
+                        <CreatePartition wcm:action="add">
+                            <Order>1</Order>
+                            <Size>350</Size>
+                            <Type>Primary</Type>
+                        </CreatePartition>
+                        <CreatePartition wcm:action="add">
+                            <Order>2</Order>
+                            <Extend>true</Extend>
+                            <Type>Primary</Type>
+                        </CreatePartition>
+                    </CreatePartitions>
+                    <ModifyPartitions>
+                        <ModifyPartition wcm:action="add">
+                            <Active>true</Active>
+                            <Format>NTFS</Format>
+                            <Label>Boot</Label>
+                            <Order>1</Order>
+                            <PartitionID>1</PartitionID>
+                            <TypeID>0x27</TypeID>
+                        </ModifyPartition>
+                        <ModifyPartition wcm:action="add">
+                            <Order>2</Order>
+                            <Active>true</Active>
+                            <Format>NTFS</Format>
+                            <Label>System</Label>
+                            <Letter>C</Letter>
+                            <PartitionID>2</PartitionID>
+                        </ModifyPartition>
+                    </ModifyPartitions>
+                    <DiskID>0</DiskID>
+                    <WillWipeDisk>true</WillWipeDisk>
+                </Disk>
+            </DiskConfiguration>
+        </component>
+    </settings>
+    <settings pass="specialize">
+        <component language="neutral" name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <ProductKey>W3GGN-FT8W3-Y4M27-J84CP-Q3VJ9</ProductKey>
+            <RegisteredOwner>--</RegisteredOwner>
+            <RegisteredOrganization>--</RegisteredOrganization>
+            <TimeZone>Europe Standard Time</TimeZone>
+        </component>
+    </settings>
+    <settings pass="oobeSystem">
+        <component language="neutral" name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <AutoLogon>
+                <Password>
+                    <Value>UwB0AGEAcgB0AGUAbgAwADEAUABhAHMAcwB3AG8AcgBkAA==</Value>
+                    <PlainText>false</PlainText>
+                </Password>
+                <LogonCount>2</LogonCount>
+                <Enabled>true</Enabled>
+                <Username>Administrator</Username>
+            </AutoLogon>
+            <UserAccounts>
+                <AdministratorPassword>
+                    <Value>UwB0AGEAcgB0AGUAbgAwADEAQQBkAG0AaQBuAGkAcwB0AHIAYQB0AG8AcgBQAGEAcwBzAHcAbwByAGQA</Value>
+                    <PlainText>false</PlainText>
+                </AdministratorPassword>
+            </UserAccounts>
+            <RegisteredOwner>--</RegisteredOwner>
+            <RegisteredOrganization>--</RegisteredOrganization>
+        </component>
+    </settings>
+    <cpi:offlineImage cpi:source="wim:c:/users/stefa/downloads/de_windows_server_2012_r2_x64_dvd_2707952/sources/install.wim#Windows Server 2012 R2 SERVERDATACENTER" xmlns:cpi="urn:schemas-microsoft-com:cpi"/>
+</unattend>
