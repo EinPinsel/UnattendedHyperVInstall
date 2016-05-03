@@ -87,7 +87,7 @@
         <component language="neutral" name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             <AutoLogon>
                 <Password>
-                    <Value>UwB0AGEAcgB0AGUAbgAwADEAUABhAHMAcwB3AG8AcgBkAA==</Value>
+                    <Value>UABhAHMAcwB3ADAAcgBkAFAAYQBzAHMAdwBvAHIAZAA=</Value>
                     <PlainText>false</PlainText>
                 </Password>
                 <LogonCount>2</LogonCount>
@@ -96,7 +96,7 @@
             </AutoLogon>
             <UserAccounts>
                 <AdministratorPassword>
-                    <Value>UwB0AGEAcgB0AGUAbgAwADEAQQBkAG0AaQBuAGkAcwB0AHIAYQB0AG8AcgBQAGEAcwBzAHcAbwByAGQA</Value>
+                    <Value>UABhAHMAcwB3AG8AcgBkAEEAZABtAGkAbgBpAHMAdAByAGEAdABvAHIAUABhAHMAcwB3AG8AcgBkAA==</Value>
                     <PlainText>false</PlainText>
                 </AdministratorPassword>
             </UserAccounts>
@@ -104,5 +104,5 @@
             <RegisteredOrganization>--</RegisteredOrganization>
         </component>
     </settings>
-    <cpi:offlineImage cpi:source="wim:c:/users/stefa/downloads/de_windows_server_2012_r2_x64_dvd_2707952/sources/install.wim#Windows Server 2012 R2 SERVERDATACENTER" xmlns:cpi="urn:schemas-microsoft-com:cpi"/>
+    <cpi:offlineImage cpi:source="wim:c:/users/stefa/downloads/de_windows_server_2012_r2_x64_dvd_2707952/sources/install.wim#Windows Server 2012 R2 SERVERDATACENTER" xmlns:cpi="urn:schemas-microsoft-com:cpi" />
 </unattend>
